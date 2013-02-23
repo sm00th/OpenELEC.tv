@@ -24,3 +24,4 @@
 
 mkdir -p $INSTALL/usr/lib
   cp -P $PKG_BUILD/libfaad/.libs/*.so* $INSTALL/usr/lib
+  cp -P $PKG_BUILD/common/mp4ff/.libs/*.so* $INSTALL/usr/lib
