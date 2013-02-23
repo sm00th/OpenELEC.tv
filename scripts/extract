@@ -30,7 +30,10 @@ fi
 [ -z "$PKG_URL" ] && exit 1
 [ ! -d "$SOURCES/$1" -o ! -d "$3" ] && exit 1
 
-for i in $PKG_URL; do
+PKG_LOOKUP=$PKG_URL
+[ -n "$PKG_ARCHIVE" ] && PKG_LOOKUP=$PKG_ARCHIVE
+
+for i in $PKG_LOOKUP; do
   FILE="`basename $i`"
 
   case $FILE in

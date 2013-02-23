@@ -37,9 +37,11 @@ if [ -n "$PKG_URL" ]; then
   for i in $URLS; do
     SOURCE_NAME="`basename $i`"
     PACKAGE="$SOURCES/$1/$SOURCE_NAME"
+    [ -n "$PKG_ARCHIVE" ] && PACKAGE="$SOURCES/$1/$PKG_ARCHIVE"
     PACKAGE_MIRROR="$DISTRO_MIRROR/$PKG_NAME/$SOURCE_NAME"
     [ "$VERBOSE" != "yes" ] && WGET_OPT=-q
-    WGET_CMD="wget --passive-ftp --no-check-certificate -c $WGET_OPT -P $SOURCES/$1"
+    [ -n "$PKG_ARCHIVE" ] && WGET_OUT="-O $PACKAGE"
+    WGET_CMD="wget --passive-ftp --no-check-certificate -c $WGET_OPT $WGET_OUT -P $SOURCES/$1"
 
     NBWGET="1"
 
