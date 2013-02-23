@@ -105,6 +105,9 @@
 # SquashFS compression method (gzip / lzo / xz)
   SQUASHFS_COMPRESSION="lzo"
 
+# Build and install MusicPlayerDaemon (MPD) (yes / no)
+  MUSICPD_SUPPORT="yes"
+
 # Mediacenter to use (xbmc / no)
   MEDIACENTER="xbmc"
 

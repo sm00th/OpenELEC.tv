@@ -343,6 +343,7 @@ fi
   config_message="$config_message\n - UPower support:\t\t\t $UPOWER"
   config_message="$config_message\n - Update support:\t\t\t $UPDATE_SUPPORT"
   config_message="$config_message\n - Installer support:\t\t\t $INSTALLER_SUPPORT"
+  config_message="$config_message\n - MusicPD support:\t\t\t $MUSICPD_SUPPORT"
 
   # Misc. Filesystems
 
